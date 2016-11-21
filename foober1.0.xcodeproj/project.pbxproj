@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98B32CBA1DE2DF0C00A4B312 /* kitchenAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */; };
+		98B32CBE1DE2E0F600A4B312 /* kitchenAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */; };
+		98B32CC01DE2E29000A4B312 /* kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CBF1DE2E29000A4B312 /* kitchen.swift */; };
+		98B32CC21DE2E2DA00A4B312 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CC11DE2E2DA00A4B312 /* Menu.swift */; };
 		EF6F96D61DE297960018D9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F96D51DE297960018D9E5 /* AppDelegate.swift */; };
 		EF6F96D81DE297960018D9E5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F96D71DE297960018D9E5 /* FirstViewController.swift */; };
 		EF6F96DA1DE297960018D9E5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F96D91DE297960018D9E5 /* SecondViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenAnnotation.swift; sourceTree = "<group>"; };
+		98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenAnnotationView.swift; sourceTree = "<group>"; };
+		98B32CBF1DE2E29000A4B312 /* kitchen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchen.swift; sourceTree = "<group>"; };
+		98B32CC11DE2E2DA00A4B312 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		EF6F96D21DE297960018D9E5 /* foober1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foober1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6F96D51DE297960018D9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF6F96D71DE297960018D9E5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +77,10 @@
 				EF6F96E31DE297960018D9E5 /* Info.plist */,
 				EF6F96E91DE29D180018D9E5 /* ChefDetailTableViewController.swift */,
 				EF6F96EB1DE29E500018D9E5 /* ThirdViewController.swift */,
+				98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */,
+				98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */,
+				98B32CBF1DE2E29000A4B312 /* kitchen.swift */,
+				98B32CC11DE2E2DA00A4B312 /* Menu.swift */,
 			);
 			path = foober1.0;
 			sourceTree = "<group>";
@@ -147,10 +159,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6F96DA1DE297960018D9E5 /* SecondViewController.swift in Sources */,
+				98B32CBE1DE2E0F600A4B312 /* kitchenAnnotationView.swift in Sources */,
 				EF6F96D61DE297960018D9E5 /* AppDelegate.swift in Sources */,
 				EF6F96EC1DE29E500018D9E5 /* ThirdViewController.swift in Sources */,
 				EF6F96EA1DE29D180018D9E5 /* ChefDetailTableViewController.swift in Sources */,
 				EF6F96D81DE297960018D9E5 /* FirstViewController.swift in Sources */,
+				98B32CC21DE2E2DA00A4B312 /* Menu.swift in Sources */,
+				98B32CC01DE2E29000A4B312 /* kitchen.swift in Sources */,
+				98B32CBA1DE2DF0C00A4B312 /* kitchenAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +330,7 @@
 				EF6F96E81DE297960018D9E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
