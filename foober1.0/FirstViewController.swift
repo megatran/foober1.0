@@ -30,10 +30,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
         
         locationManager.requestWhenInUseAuthorization()
         
-        if locationManager.location != nil {
+        if let location = locationManager.location {
+            // Define the region of the map to be displayed. The span is in meters.
+            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 600.0,
+                                                            600.0)
+            
+            // Animate changing the currently visible region.
+            mapView.setRegion(region, animated: true)
+            
             dummyKitchen()
             zoomMapView()
             dropPin()
+            
         }
     }
 
@@ -41,8 +49,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
         [CLLocation]) {
         if let location = locationManager.location {
             // Define the region of the map to be displayed. The span is in meters.
-            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 300.0,
-                                                            300.0)
+            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 600.0,
+                                                            600.0)
             
             // Animate changing the currently visible region.
             mapView.setRegion(region, animated: true)
@@ -93,10 +101,17 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
             tmpKitchen.address = "1230 ABC Rd"
             tmpKitchen.name = "Loc"
             
-            let lat_random = randomInt(min: 0, max: 9) as! Double
-            let long_random = randomInt(min: 0, max: 9) as! Double
-            let lat_divisor = randomInt(min: 100, max: 1000) as! Double
-            let long_divisor = randomInt(min: 100, max: 1000) as! Double
+            var lat_random = Double(randomInt(min: 0, max: 9))
+            var long_random = Double(randomInt(min: 0, max: 9))
+            let lat_divisor = Double(randomInt(min: 100, max: 1000))
+            let long_divisor = Double(randomInt(min: 500, max: 1500))
+            
+            let negative = Double(randomInt(min: -1, max: 0))
+            
+            if negative < 0{
+                lat_random *= negative
+                long_random *= negative
+            }
             
             tmpKitchen.location = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)! + lat_random/lat_divisor, longitude: (locationManager.location?.coordinate.longitude)! + long_random/long_divisor)
             
@@ -108,10 +123,11 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate{
         
         for var item in kitchens {
                 let annotation = MKPointAnnotation()
-                let longitude = locationManager.location?.coordinate.longitude
-                let latitude = (locationManager.location?.coordinate.latitude)! + 0.0005
+                //let longitude = locationManager.location?.coordinate.longitude
+                //let latitude = (locationManager.location?.coordinate.latitude)! + 0.0005
                 
-                annotation.coordinate =  CLLocationCoordinate2DMake(latitude, longitude!)
+                //annotation.coordinate =  CLLocationCoordinate2DMake(latitude, longitude!)
+                annotation.coordinate = item.location
                 annotation.title = item.name
                 annotation.subtitle = item.address
                 mapView.addAnnotation(annotation)
