@@ -13,6 +13,8 @@
 		EF6F96DD1DE297960018D9E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6F96DB1DE297960018D9E5 /* Main.storyboard */; };
 		EF6F96DF1DE297960018D9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6F96DE1DE297960018D9E5 /* Assets.xcassets */; };
 		EF6F96E21DE297960018D9E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6F96E01DE297960018D9E5 /* LaunchScreen.storyboard */; };
+		EF6F96EA1DE29D180018D9E5 /* ChefDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F96E91DE29D180018D9E5 /* ChefDetailTableViewController.swift */; };
+		EF6F96EC1DE29E500018D9E5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F96EB1DE29E500018D9E5 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EF6F96DE1DE297960018D9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6F96E11DE297960018D9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF6F96E31DE297960018D9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6F96E91DE29D180018D9E5 /* ChefDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefDetailTableViewController.swift; sourceTree = "<group>"; };
+		EF6F96EB1DE29E500018D9E5 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				EF6F96DE1DE297960018D9E5 /* Assets.xcassets */,
 				EF6F96E01DE297960018D9E5 /* LaunchScreen.storyboard */,
 				EF6F96E31DE297960018D9E5 /* Info.plist */,
+				EF6F96E91DE29D180018D9E5 /* ChefDetailTableViewController.swift */,
+				EF6F96EB1DE29E500018D9E5 /* ThirdViewController.swift */,
 			);
 			path = foober1.0;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 			files = (
 				EF6F96DA1DE297960018D9E5 /* SecondViewController.swift in Sources */,
 				EF6F96D61DE297960018D9E5 /* AppDelegate.swift in Sources */,
+				EF6F96EC1DE29E500018D9E5 /* ThirdViewController.swift in Sources */,
+				EF6F96EA1DE29D180018D9E5 /* ChefDetailTableViewController.swift in Sources */,
 				EF6F96D81DE297960018D9E5 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
