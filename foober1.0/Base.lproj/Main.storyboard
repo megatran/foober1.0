@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Order-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                             <constraint firstItem="zTa-Nq-WoY" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="q2b-lA-8EN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Order" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="mapView" destination="zTa-Nq-WoY" id="fWM-sp-mhT"/>
                         <segue destination="opF-YS-LCT" kind="show" identifier="chefSegue" id="zGa-hI-FCF"/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="1681" y="-321"/>
         </scene>
-        <!--Second-->
+        <!--Setting-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Setting" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -150,16 +150,16 @@
                             <constraint firstItem="Ydc-Pm-pL3" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="shP-Wc-vnU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
-        <!--Item-->
+        <!--Help-->
         <scene sceneID="m28-Vv-WRl">
             <objects>
-                <viewController id="q4p-vj-mhY" customClass="ThirdViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Help" id="q4p-vj-mhY" customClass="ThirdViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P4Q-B6-4X3"/>
                         <viewControllerLayoutGuide type="bottom" id="lhd-y6-YRI"/>
@@ -185,7 +185,7 @@
                             <constraint firstItem="ELU-T7-Wx7" firstAttribute="top" secondItem="P4Q-B6-4X3" secondAttribute="bottom" constant="8" symbolic="YES" id="OXX-e1-ezk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rTm-8N-JtP"/>
+                    <tabBarItem key="tabBarItem" title="Help" id="rTm-8N-JtP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bo3-Jf-reG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
