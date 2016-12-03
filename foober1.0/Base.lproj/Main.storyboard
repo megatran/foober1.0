@@ -300,7 +300,7 @@
         <!--launchScreen-->
         <scene sceneID="Ebf-hd-XxP">
             <objects>
-                <viewController title="launchScreen" id="9Qw-Kv-X5j" sceneMemberID="viewController">
+                <viewController title="launchScreen" id="9Qw-Kv-X5j" customClass="launchScreenViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Ez-R4-cOd"/>
                         <viewControllerLayoutGuide type="bottom" id="tGu-D2-IZ1"/>

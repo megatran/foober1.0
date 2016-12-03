@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 
 class kitchen {
+    var id = UUID().uuidString
     var name : String = ""
     var address : String = ""
     var menu : [item] = []
