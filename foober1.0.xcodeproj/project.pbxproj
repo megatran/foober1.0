@@ -292,7 +292,7 @@
 				DEVELOPMENT_TEAM = DLW5NH6NSH;
 				INFOPLIST_FILE = foober1.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.mines.nttran.foober1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.mines.foober1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -305,7 +305,7 @@
 				DEVELOPMENT_TEAM = DLW5NH6NSH;
 				INFOPLIST_FILE = foober1.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.mines.nttran.foober1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.mines.foober1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
