@@ -1,14 +1,14 @@
 //
-//  ThirdViewController.swift
+//  loginViewController.swift
 //  foober1.0
 //
-//  Created by megatran on 11/20/16.
+//  Created by Amos Gwa on 12/3/16.
 //  Copyright © 2016 Colorado School of Mines. All rights reserved.
 //
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class loginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
