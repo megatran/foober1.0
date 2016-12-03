@@ -22,6 +22,10 @@
 		FC5400941DF35B590030377C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC5400931DF35B590030377C /* GoogleService-Info.plist */; };
 		FC5400961DF35EAE0030377C /* FirebaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400951DF35EAE0030377C /* FirebaseDB.swift */; };
 		FC5400981DF362490030377C /* launchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400971DF362490030377C /* launchScreenViewController.swift */; };
+		FC54009A1DF36B340030377C /* myOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400991DF36B340030377C /* myOrderCell.swift */; };
+		FC54009C1DF36B400030377C /* menuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009B1DF36B400030377C /* menuCell.swift */; };
+		FC54009E1DF36B750030377C /* menuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009D1DF36B750030377C /* menuTableView.swift */; };
+		FC5400A01DF36CC00030377C /* kitchenInfoPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		FC5400931DF35B590030377C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC5400951DF35EAE0030377C /* FirebaseDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDB.swift; sourceTree = "<group>"; };
 		FC5400971DF362490030377C /* launchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchScreenViewController.swift; sourceTree = "<group>"; };
+		FC5400991DF36B340030377C /* myOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myOrderCell.swift; sourceTree = "<group>"; };
+		FC54009B1DF36B400030377C /* menuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuCell.swift; sourceTree = "<group>"; };
+		FC54009D1DF36B750030377C /* menuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableView.swift; sourceTree = "<group>"; };
+		FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenInfoPopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,23 +104,67 @@
 		EF6F96D41DE297960018D9E5 /* foober1.0 */ = {
 			isa = PBXGroup;
 			children = (
-				FC5400931DF35B590030377C /* GoogleService-Info.plist */,
+				EF6F96DB1DE297960018D9E5 /* Main.storyboard */,
 				EF6F96D51DE297960018D9E5 /* AppDelegate.swift */,
 				FC5400951DF35EAE0030377C /* FirebaseDB.swift */,
-				FC5400971DF362490030377C /* launchScreenViewController.swift */,
-				FC5400911DF34A7D0030377C /* loginViewController.swift */,
-				FC54008D1DF349830030377C /* myOrderViewController.swift */,
-				FC54008B1DF349030030377C /* mapViewController.swift */,
-				FC54008F1DF349AB0030377C /* accountSettingViewController.swift */,
-				EF6F96DB1DE297960018D9E5 /* Main.storyboard */,
+				FC5400A31DF36EE10030377C /* login */,
+				FC5400A11DF36EB40030377C /* mapView */,
+				FC5400A41DF36EED0030377C /* myOrderView */,
+				FC5400A61DF36F1E0030377C /* setting */,
+				FC5400A51DF36F0C0030377C /* model */,
 				EF6F96DE1DE297960018D9E5 /* Assets.xcassets */,
+				FC5400931DF35B590030377C /* GoogleService-Info.plist */,
 				EF6F96E31DE297960018D9E5 /* Info.plist */,
+			);
+			path = foober1.0;
+			sourceTree = "<group>";
+		};
+		FC5400A11DF36EB40030377C /* mapView */ = {
+			isa = PBXGroup;
+			children = (
+				FC54008B1DF349030030377C /* mapViewController.swift */,
+				FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */,
 				98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */,
 				98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */,
+				FC54009D1DF36B750030377C /* menuTableView.swift */,
+				FC54009B1DF36B400030377C /* menuCell.swift */,
+			);
+			name = mapView;
+			sourceTree = "<group>";
+		};
+		FC5400A31DF36EE10030377C /* login */ = {
+			isa = PBXGroup;
+			children = (
+				FC5400971DF362490030377C /* launchScreenViewController.swift */,
+				FC5400911DF34A7D0030377C /* loginViewController.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		FC5400A41DF36EED0030377C /* myOrderView */ = {
+			isa = PBXGroup;
+			children = (
+				FC54008D1DF349830030377C /* myOrderViewController.swift */,
+				FC5400991DF36B340030377C /* myOrderCell.swift */,
+			);
+			name = myOrderView;
+			sourceTree = "<group>";
+		};
+		FC5400A51DF36F0C0030377C /* model */ = {
+			isa = PBXGroup;
+			children = (
 				98B32CBF1DE2E29000A4B312 /* kitchen.swift */,
 				98B32CC11DE2E2DA00A4B312 /* Menu.swift */,
 			);
-			path = foober1.0;
+			name = model;
+			sourceTree = "<group>";
+		};
+		FC5400A61DF36F1E0030377C /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				FC54008F1DF349AB0030377C /* accountSettingViewController.swift */,
+			);
+			name = setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +293,11 @@
 			files = (
 				FC54008C1DF349030030377C /* mapViewController.swift in Sources */,
 				FC5400901DF349AB0030377C /* accountSettingViewController.swift in Sources */,
+				FC54009A1DF36B340030377C /* myOrderCell.swift in Sources */,
 				98B32CBE1DE2E0F600A4B312 /* kitchenAnnotationView.swift in Sources */,
+				FC54009E1DF36B750030377C /* menuTableView.swift in Sources */,
 				EF6F96D61DE297960018D9E5 /* AppDelegate.swift in Sources */,
+				FC5400A01DF36CC00030377C /* kitchenInfoPopUpView.swift in Sources */,
 				98B32CC21DE2E2DA00A4B312 /* Menu.swift in Sources */,
 				98B32CC01DE2E29000A4B312 /* kitchen.swift in Sources */,
 				98B32CBA1DE2DF0C00A4B312 /* kitchenAnnotation.swift in Sources */,
@@ -250,6 +305,7 @@
 				FC5400961DF35EAE0030377C /* FirebaseDB.swift in Sources */,
 				FC5400981DF362490030377C /* launchScreenViewController.swift in Sources */,
 				FC5400921DF34A7D0030377C /* loginViewController.swift in Sources */,
+				FC54009C1DF36B400030377C /* menuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
