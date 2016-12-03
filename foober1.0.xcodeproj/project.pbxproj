@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96E709522F32138DB6138A9B /* Pods_foober1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E53FAE6B7BB0DC60E53C7CA /* Pods_foober1_0.framework */; };
 		98B32CBA1DE2DF0C00A4B312 /* kitchenAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */; };
 		98B32CBE1DE2E0F600A4B312 /* kitchenAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */; };
 		98B32CC01DE2E29000A4B312 /* kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CBF1DE2E29000A4B312 /* kitchen.swift */; };
@@ -18,13 +19,23 @@
 		FC54008E1DF349830030377C /* myOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008D1DF349830030377C /* myOrderViewController.swift */; };
 		FC5400901DF349AB0030377C /* accountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008F1DF349AB0030377C /* accountSettingViewController.swift */; };
 		FC5400921DF34A7D0030377C /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400911DF34A7D0030377C /* loginViewController.swift */; };
+		FC5400941DF35B590030377C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC5400931DF35B590030377C /* GoogleService-Info.plist */; };
+		FC5400961DF35EAE0030377C /* FirebaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400951DF35EAE0030377C /* FirebaseDB.swift */; };
+		FC5400981DF362490030377C /* launchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400971DF362490030377C /* launchScreenViewController.swift */; };
+		FC54009A1DF36B340030377C /* myOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400991DF36B340030377C /* myOrderCell.swift */; };
+		FC54009C1DF36B400030377C /* menuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009B1DF36B400030377C /* menuCell.swift */; };
+		FC54009E1DF36B750030377C /* menuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009D1DF36B750030377C /* menuTableView.swift */; };
+		FC5400A01DF36CC00030377C /* kitchenInfoPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69685522E5D3767E8BA4B95B /* Pods-foober1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foober1.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-foober1.0/Pods-foober1.0.release.xcconfig"; sourceTree = "<group>"; };
 		98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenAnnotation.swift; sourceTree = "<group>"; };
 		98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenAnnotationView.swift; sourceTree = "<group>"; };
 		98B32CBF1DE2E29000A4B312 /* kitchen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchen.swift; sourceTree = "<group>"; };
 		98B32CC11DE2E2DA00A4B312 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		99CFB4E0D9A8403D8BA0EB1D /* Pods-foober1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foober1.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-foober1.0/Pods-foober1.0.debug.xcconfig"; sourceTree = "<group>"; };
+		9E53FAE6B7BB0DC60E53C7CA /* Pods_foober1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foober1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6F96D21DE297960018D9E5 /* foober1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foober1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6F96D51DE297960018D9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF6F96DC1DE297960018D9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +45,13 @@
 		FC54008D1DF349830030377C /* myOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myOrderViewController.swift; sourceTree = "<group>"; };
 		FC54008F1DF349AB0030377C /* accountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountSettingViewController.swift; sourceTree = "<group>"; };
 		FC5400911DF34A7D0030377C /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		FC5400931DF35B590030377C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC5400951DF35EAE0030377C /* FirebaseDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDB.swift; sourceTree = "<group>"; };
+		FC5400971DF362490030377C /* launchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchScreenViewController.swift; sourceTree = "<group>"; };
+		FC5400991DF36B340030377C /* myOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myOrderCell.swift; sourceTree = "<group>"; };
+		FC54009B1DF36B400030377C /* menuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuCell.swift; sourceTree = "<group>"; };
+		FC54009D1DF36B750030377C /* menuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableView.swift; sourceTree = "<group>"; };
+		FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenInfoPopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +59,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E709522F32138DB6138A9B /* Pods_foober1_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5621E60DE6ACA0EB7AB8043D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E53FAE6B7BB0DC60E53C7CA /* Pods_foober1_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB99E20B75E323BAE5B28692 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99CFB4E0D9A8403D8BA0EB1D /* Pods-foober1.0.debug.xcconfig */,
+				69685522E5D3767E8BA4B95B /* Pods-foober1.0.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF6F96C91DE297960018D9E5 = {
 			isa = PBXGroup;
 			children = (
 				EF6F96D41DE297960018D9E5 /* foober1.0 */,
 				EF6F96D31DE297960018D9E5 /* Products */,
+				DB99E20B75E323BAE5B28692 /* Pods */,
+				5621E60DE6ACA0EB7AB8043D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,20 +104,67 @@
 		EF6F96D41DE297960018D9E5 /* foober1.0 */ = {
 			isa = PBXGroup;
 			children = (
-				EF6F96D51DE297960018D9E5 /* AppDelegate.swift */,
-				FC5400911DF34A7D0030377C /* loginViewController.swift */,
-				FC54008D1DF349830030377C /* myOrderViewController.swift */,
-				FC54008B1DF349030030377C /* mapViewController.swift */,
-				FC54008F1DF349AB0030377C /* accountSettingViewController.swift */,
 				EF6F96DB1DE297960018D9E5 /* Main.storyboard */,
+				EF6F96D51DE297960018D9E5 /* AppDelegate.swift */,
+				FC5400951DF35EAE0030377C /* FirebaseDB.swift */,
+				FC5400A31DF36EE10030377C /* login */,
+				FC5400A11DF36EB40030377C /* mapView */,
+				FC5400A41DF36EED0030377C /* myOrderView */,
+				FC5400A61DF36F1E0030377C /* setting */,
+				FC5400A51DF36F0C0030377C /* model */,
 				EF6F96DE1DE297960018D9E5 /* Assets.xcassets */,
+				FC5400931DF35B590030377C /* GoogleService-Info.plist */,
 				EF6F96E31DE297960018D9E5 /* Info.plist */,
+			);
+			path = foober1.0;
+			sourceTree = "<group>";
+		};
+		FC5400A11DF36EB40030377C /* mapView */ = {
+			isa = PBXGroup;
+			children = (
+				FC54008B1DF349030030377C /* mapViewController.swift */,
+				FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */,
 				98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */,
 				98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */,
+				FC54009D1DF36B750030377C /* menuTableView.swift */,
+				FC54009B1DF36B400030377C /* menuCell.swift */,
+			);
+			name = mapView;
+			sourceTree = "<group>";
+		};
+		FC5400A31DF36EE10030377C /* login */ = {
+			isa = PBXGroup;
+			children = (
+				FC5400971DF362490030377C /* launchScreenViewController.swift */,
+				FC5400911DF34A7D0030377C /* loginViewController.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		FC5400A41DF36EED0030377C /* myOrderView */ = {
+			isa = PBXGroup;
+			children = (
+				FC54008D1DF349830030377C /* myOrderViewController.swift */,
+				FC5400991DF36B340030377C /* myOrderCell.swift */,
+			);
+			name = myOrderView;
+			sourceTree = "<group>";
+		};
+		FC5400A51DF36F0C0030377C /* model */ = {
+			isa = PBXGroup;
+			children = (
 				98B32CBF1DE2E29000A4B312 /* kitchen.swift */,
 				98B32CC11DE2E2DA00A4B312 /* Menu.swift */,
 			);
-			path = foober1.0;
+			name = model;
+			sourceTree = "<group>";
+		};
+		FC5400A61DF36F1E0030377C /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				FC54008F1DF349AB0030377C /* accountSettingViewController.swift */,
+			);
+			name = setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF6F96E61DE297960018D9E5 /* Build configuration list for PBXNativeTarget "foober1.0" */;
 			buildPhases = (
+				05D87829418B9F622AAB3A00 /* [CP] Check Pods Manifest.lock */,
 				EF6F96CE1DE297960018D9E5 /* Sources */,
 				EF6F96CF1DE297960018D9E5 /* Frameworks */,
 				EF6F96D01DE297960018D9E5 /* Resources */,
+				E1EA1C166AC5F9AFD62B6942 /* [CP] Embed Pods Frameworks */,
+				6C7BDE32342554DAF0BA9FA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,10 +232,59 @@
 			files = (
 				EF6F96DF1DE297960018D9E5 /* Assets.xcassets in Resources */,
 				EF6F96DD1DE297960018D9E5 /* Main.storyboard in Resources */,
+				FC5400941DF35B590030377C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05D87829418B9F622AAB3A00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C7BDE32342554DAF0BA9FA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foober1.0/Pods-foober1.0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1EA1C166AC5F9AFD62B6942 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foober1.0/Pods-foober1.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF6F96CE1DE297960018D9E5 /* Sources */ = {
@@ -156,13 +293,19 @@
 			files = (
 				FC54008C1DF349030030377C /* mapViewController.swift in Sources */,
 				FC5400901DF349AB0030377C /* accountSettingViewController.swift in Sources */,
+				FC54009A1DF36B340030377C /* myOrderCell.swift in Sources */,
 				98B32CBE1DE2E0F600A4B312 /* kitchenAnnotationView.swift in Sources */,
+				FC54009E1DF36B750030377C /* menuTableView.swift in Sources */,
 				EF6F96D61DE297960018D9E5 /* AppDelegate.swift in Sources */,
+				FC5400A01DF36CC00030377C /* kitchenInfoPopUpView.swift in Sources */,
 				98B32CC21DE2E2DA00A4B312 /* Menu.swift in Sources */,
 				98B32CC01DE2E29000A4B312 /* kitchen.swift in Sources */,
 				98B32CBA1DE2DF0C00A4B312 /* kitchenAnnotation.swift in Sources */,
 				FC54008E1DF349830030377C /* myOrderViewController.swift in Sources */,
+				FC5400961DF35EAE0030377C /* FirebaseDB.swift in Sources */,
+				FC5400981DF362490030377C /* launchScreenViewController.swift in Sources */,
 				FC5400921DF34A7D0030377C /* loginViewController.swift in Sources */,
+				FC54009C1DF36B400030377C /* menuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +418,7 @@
 		};
 		EF6F96E71DE297960018D9E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99CFB4E0D9A8403D8BA0EB1D /* Pods-foober1.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -285,12 +429,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.minesapp.foober1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		EF6F96E81DE297960018D9E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69685522E5D3767E8BA4B95B /* Pods-foober1.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -301,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.minesapp.foober1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

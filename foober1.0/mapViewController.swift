@@ -43,6 +43,16 @@ class mapViewController: UIViewController, CLLocationManagerDelegate{
             dropPin()
             
         }
+        
+    }
+    
+    func showKitchenDetailPopup() {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "kitchenPopUp") as! kitchenInfoPopUpView
+        
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:

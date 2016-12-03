@@ -1,0 +1,6 @@
+framework module Pods_foober1_0 {
+  umbrella header "Pods-foober1.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

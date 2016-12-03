@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 class item {
     var name : String = ""
     var price = Double()
     var ingredients : [String] = []
+    var image = UIImage()
 }
