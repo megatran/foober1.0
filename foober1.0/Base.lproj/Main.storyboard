@@ -56,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qSW-tG-NJF" id="YUP-g5-GLP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mP2-J3-Wd4">
@@ -264,6 +264,9 @@
                                     <constraint firstAttribute="width" constant="82" id="7pB-Vi-PCo"/>
                                 </constraints>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updatePressed:" destination="q4p-vj-mhY" eventType="touchUpInside" id="jc2-Zg-au8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,6 +307,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting" id="rTm-8N-JtP"/>
+                    <connections>
+                        <outlet property="addressField" destination="8PS-Zk-gNP" id="ppM-mE-gV4"/>
+                        <outlet property="emailField" destination="exG-Gg-EjE" id="ldc-5R-PQ3"/>
+                        <outlet property="passwordField" destination="k4K-uo-RWP" id="NEE-VP-LWC"/>
+                        <outlet property="phoneField" destination="QS2-9l-Lg9" id="ePh-Zh-V7c"/>
+                        <outlet property="usernameField" destination="V5K-8c-FLW" id="Jh0-Cn-HgZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bo3-Jf-reG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -462,6 +472,9 @@
                                 <rect key="frame" x="138" y="239" width="99" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login/Register"/>
+                                <connections>
+                                    <action selector="loginBttnPressed:" destination="iVC-EI-zNu" eventType="touchUpInside" id="bAf-6i-Yl4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kif-UG-0eo">
                                 <rect key="frame" x="34" y="111" width="79" height="21"/>
@@ -473,6 +486,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="g5f-fU-7uJ" id="Xsa-VT-DRL"/>
+                        <outlet property="usernameField" destination="oBA-Q8-Vyz" id="b8Y-Wo-4we"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVG-BK-AQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -494,11 +511,17 @@
                                 <rect key="frame" x="109" y="318" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="9Qw-Kv-X5j" eventType="touchUpInside" id="eMr-W9-6c6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reJ-eR-oxD">
                                 <rect key="frame" x="219" y="318" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="signupPressed:" destination="9Qw-Kv-X5j" eventType="touchUpInside" id="Rbh-K5-F8i"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -521,7 +544,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z37-E2-ws2" id="oPQ-65-Xam">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPZ-va-193">

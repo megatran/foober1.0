@@ -22,7 +22,11 @@ class launchScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func loginPressed(_ sender: Any) {
+    }
 
+    @IBAction func signupPressed(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

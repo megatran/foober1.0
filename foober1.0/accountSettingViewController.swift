@@ -10,6 +10,11 @@ import UIKit
 
 class accountSettingViewController: UIViewController {
 
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var addressField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +26,9 @@ class accountSettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //pressing update button
+    @IBAction func updatePressed(_ sender: Any) {
+    }
 
     /*
     // MARK: - Navigation
