@@ -10,6 +10,8 @@ import UIKit
 
 class myOrderCell: UITableViewCell {
 
+    @IBOutlet weak var waitLabel: UILabel!
+    @IBOutlet weak var orderTitleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

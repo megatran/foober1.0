@@ -43,20 +43,20 @@
             </objects>
             <point key="canvasLocation" x="151" y="-352"/>
         </scene>
-        <!--My Orders-->
+        <!--MyOrder-->
         <scene sceneID="wzr-Ko-a56">
             <objects>
-                <tableViewController id="nZx-aa-ycj" customClass="myOrderViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Menu" id="nZx-aa-ycj" userLabel="MyOrder" customClass="myOrderViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" id="282-aG-ack">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="qSW-tG-NJF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="qSW-tG-NJF" customClass="myOrderCell" customModule="foober1_0" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qSW-tG-NJF" id="YUP-g5-GLP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mP2-J3-Wd4">
@@ -92,6 +92,8 @@
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
+                                    <outlet property="orderTitleLabel" destination="CT7-33-pDJ" id="HWI-Jo-nH7"/>
+                                    <outlet property="waitLabel" destination="9lA-IX-8iX" id="HVP-01-rhB"/>
                                     <outletCollection property="gestureRecognizers" destination="9ws-sv-Hg9" appends="YES" id="4VT-L6-VIU"/>
                                 </connections>
                             </tableViewCell>
@@ -106,7 +108,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPG-u0-wGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="9ws-sv-Hg9"/>
             </objects>
-            <point key="canvasLocation" x="582" y="167"/>
+            <point key="canvasLocation" x="527" y="90"/>
         </scene>
         <!--itemDetailview-->
         <scene sceneID="Vso-4U-ufU">
@@ -531,26 +533,26 @@
             </objects>
             <point key="canvasLocation" x="-2396" y="26"/>
         </scene>
-        <!--My Orders-->
+        <!--Menu-->
         <scene sceneID="Jfa-5G-tDF">
             <objects>
-                <tableViewController id="ZmE-4a-eih" customClass="myOrderViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZmE-4a-eih" userLabel="Menu" customClass="myOrderViewController" customModule="foober1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" id="Atj-Li-Bpp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="z37-E2-ws2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="z37-E2-ws2" customClass="menuCell" customModule="foober1_0" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z37-E2-ws2" id="oPQ-65-Xam">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPZ-va-193">
                                             <rect key="frame" x="8" y="0.0" width="148" height="99"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manu Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqH-6S-7by">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqH-6S-7by">
                                             <rect key="frame" x="164" y="22" width="203" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -591,6 +593,8 @@
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
+                                    <outlet property="availableItemLabel" destination="F4l-Pt-9BV" id="Jhj-8A-RSc"/>
+                                    <outlet property="menuLabel" destination="oPQ-65-Xam" id="gIm-d7-gPe"/>
                                     <outletCollection property="gestureRecognizers" destination="4Oz-dx-BbB" appends="YES" id="L5b-vW-wan"/>
                                 </connections>
                             </tableViewCell>
