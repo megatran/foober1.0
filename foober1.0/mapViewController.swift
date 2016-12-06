@@ -14,35 +14,42 @@ class mapViewController: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet weak var mapView: MKMapView!
     private let locationManager = CLLocationManager()
+    var location : CLLocationCoordinate2D? = nil
+    var span : MKCoordinateSpan? = nil
+    var region : MKCoordinateRegion? = nil
     
     private var kitchens : [kitchen] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        print("Map View loading..")
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
         // Set a distance filter: only notify the delegate when device has
         // moved xx meters. For no filter, set to kCLDistanceFilterNone.
-        locationManager.distanceFilter = 5.0
+        //locationManager.distanceFilter = 5.0
         
-        locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestWhenInUseAuthorization()
         
-        if let location = locationManager.location {
-            // Define the region of the map to be displayed. The span is in meters.
-            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 600.0,
-                                                            600.0)
-            
-            // Animate changing the currently visible region.
-            mapView.setRegion(region, animated: true)
-            
-            dummyKitchen()
-            zoomMapView()
-            dropPin()
-            
-        }
+        // Define a location using latitude and longitude.
+        location = CLLocationCoordinate2DMake(39.751081, -105.219362)
+        
+        // Define the area spanned by a map region.
+        span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        
+        // Region of the map to be displayed.
+        region = MKCoordinateRegionMake(location!, span!)
+        
+        // Animate changing the currently visible region.
+        mapView.setRegion(region!, animated: true)
+        
+        database.setupDBListeners()
+        
+        dummyKitchen()
+        zoomMapView()
+        dropPin()
         
     }
     
@@ -123,14 +130,14 @@ class mapViewController: UIViewController, CLLocationManagerDelegate{
                 long_random *= negative
             }
             
-            tmpKitchen.location = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)! + lat_random/lat_divisor, longitude: (locationManager.location?.coordinate.longitude)! + long_random/long_divisor)
+            tmpKitchen.location = CLLocationCoordinate2D(latitude: (self.location?.latitude)! + lat_random/lat_divisor, longitude: (self.location?.longitude)! + long_random/long_divisor)
             
             kitchens.append(tmpKitchen)
         }
     }
     
     func dropPin() {
-        
+        print("calling drop in")
         for var item in kitchens {
             let annotation = MKPointAnnotation()
             //let longitude = locationManager.location?.coordinate.longitude

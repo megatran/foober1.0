@@ -1,8 +1,5 @@
 {
   "kitchens" : {
-    "100" : {
-      "Name" : "Yolo"
-    },
     "kitchen_id" : {
       "name" : "Hello"
     }

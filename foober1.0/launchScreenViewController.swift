@@ -17,8 +17,11 @@ class launchScreenViewController: UIViewController {
             
 //            OperationQueue.main.addOperation {
 //                [weak self] in
-//                self?.performSegue(withIdentifier: "loggedInSegue", sender: self)
+//                self?.performSegue(withIdentifier: "loggedInSegue", sender: nil)
 //            }
+        if isAuthenticated {
+            performSegue(withIdentifier: "loggedInSegue", sender: nil)
+        }
     }
 
     

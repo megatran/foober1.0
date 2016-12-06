@@ -36,7 +36,6 @@ class loginViewController: UIViewController {
         } else {
             titleLabel.text = "Register"
         }
-        // Do any additional setup after loading the view.
     }
     
     func addObservers() {
@@ -61,33 +60,44 @@ class loginViewController: UIViewController {
     
     
     @IBAction func loginBttnPressed(_ sender: UIButton) {
-        isAuthenticated = true
-        if isAuthenticated {
-            // Check the database against.
-            performSegue(withIdentifier: "authenticatedSegue", sender: self)
+        if checkUser(username: usernameField.text!, password: passwordField.text!) {
+            isAuthenticated = true
+            performSegue(withIdentifier: "authenticatedSegue", sender: nil)
         } else {
             // Display Error message.
+            showAlert(message: "Please check your username or password.")
         }
-
     }
 
     @IBAction func registerBttnPressed(_ sender: UIButton) {
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    func checkUser(username: String, password: String) -> Bool{
+        for i in self.users {
+            if(i.username == username) {
+                if(i.password == password) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        
+        return false;
     }
-    */
-    // Utility functions
+    
     func printUsers() {
         print("=============Printing users :=============")
         for i in 0..<self.users.count {
             self.users[i].printUser();
         }
         print("==========================================")
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
 }
