@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 
 var isAuthenticated = false
-
 class loginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
@@ -61,6 +60,7 @@ class loginViewController: UIViewController {
         } else {
             // Display Error message.
         }
+
     }
 
     @IBAction func registerBttnPressed(_ sender: UIButton) {

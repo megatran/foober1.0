@@ -8,5 +8,6 @@ target 'foober1.0' do
   # Pods for foober1.0
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
   pod 'Cosmos','~> 7.0'
 end

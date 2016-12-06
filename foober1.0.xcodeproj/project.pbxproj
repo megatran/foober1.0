@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AF8956F1DF664680066134A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AF8956E1DF664680066134A /* GoogleService-Info.plist */; };
 		96E709522F32138DB6138A9B /* Pods_foober1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E53FAE6B7BB0DC60E53C7CA /* Pods_foober1_0.framework */; };
 		98B32CBA1DE2DF0C00A4B312 /* kitchenAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */; };
 		98B32CBE1DE2E0F600A4B312 /* kitchenAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */; };
@@ -19,7 +20,6 @@
 		FC54008E1DF349830030377C /* myOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008D1DF349830030377C /* myOrderViewController.swift */; };
 		FC5400901DF349AB0030377C /* accountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008F1DF349AB0030377C /* accountSettingViewController.swift */; };
 		FC5400921DF34A7D0030377C /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400911DF34A7D0030377C /* loginViewController.swift */; };
-		FC5400941DF35B590030377C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC5400931DF35B590030377C /* GoogleService-Info.plist */; };
 		FC5400961DF35EAE0030377C /* FirebaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400951DF35EAE0030377C /* FirebaseDB.swift */; };
 		FC5400981DF362490030377C /* launchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400971DF362490030377C /* launchScreenViewController.swift */; };
 		FC54009A1DF36B340030377C /* myOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400991DF36B340030377C /* myOrderCell.swift */; };
@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5AF8956E1DF664680066134A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		69685522E5D3767E8BA4B95B /* Pods-foober1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foober1.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-foober1.0/Pods-foober1.0.release.xcconfig"; sourceTree = "<group>"; };
 		98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenAnnotation.swift; sourceTree = "<group>"; };
 		98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenAnnotationView.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		FC54008D1DF349830030377C /* myOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myOrderViewController.swift; sourceTree = "<group>"; };
 		FC54008F1DF349AB0030377C /* accountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountSettingViewController.swift; sourceTree = "<group>"; };
 		FC5400911DF34A7D0030377C /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
-		FC5400931DF35B590030377C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC5400951DF35EAE0030377C /* FirebaseDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDB.swift; sourceTree = "<group>"; };
 		FC5400971DF362490030377C /* launchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchScreenViewController.swift; sourceTree = "<group>"; };
 		FC5400991DF36B340030377C /* myOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myOrderCell.swift; sourceTree = "<group>"; };
@@ -106,6 +106,7 @@
 		EF6F96D41DE297960018D9E5 /* foober1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				5AF8956E1DF664680066134A /* GoogleService-Info.plist */,
 				EF6F96DB1DE297960018D9E5 /* Main.storyboard */,
 				EF6F96D51DE297960018D9E5 /* AppDelegate.swift */,
 				FC5400951DF35EAE0030377C /* FirebaseDB.swift */,
@@ -115,7 +116,6 @@
 				FC5400A61DF36F1E0030377C /* setting */,
 				FC5400A51DF36F0C0030377C /* model */,
 				EF6F96DE1DE297960018D9E5 /* Assets.xcassets */,
-				FC5400931DF35B590030377C /* GoogleService-Info.plist */,
 				EF6F96E31DE297960018D9E5 /* Info.plist */,
 			);
 			path = foober1.0;
@@ -235,7 +235,7 @@
 			files = (
 				EF6F96DF1DE297960018D9E5 /* Assets.xcassets in Resources */,
 				EF6F96DD1DE297960018D9E5 /* Main.storyboard in Resources */,
-				FC5400941DF35B590030377C /* GoogleService-Info.plist in Resources */,
+				5AF8956F1DF664680066134A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
