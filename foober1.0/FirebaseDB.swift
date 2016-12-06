@@ -31,12 +31,12 @@ class FirebaseDB {
         print("Getting user Info")
         ref.child(U.userKey)
             .queryOrderedByValue()
-            .observe(.value, with: { (snapshot) in
+            .observe(.childAdded, with: { (snapshot) in
                 
-                let user = self.convertSnapshotToUserObject(snapshot)
+                let tmp_user = self.convertSnapshotToUserObject(snapshot)
                 
                 // Check if the current array already contains the user with the username.
-                let index = self.findUser(username: user.username);
+                let index = self.findUser(username: tmp_user.username);
                 
                 //print("Printing added kitchen")
                 //kitchen.printkitchen()
@@ -44,19 +44,20 @@ class FirebaseDB {
                 // Make sure that the kitchen is a new user.
                 // Otherwise update the old one.
                 if index < 0 {
-                    print("new user")
-                    user.printUser()
-                    self.Users.append(user)
+                    tmp_user.printUser()
+                    self.Users.append(tmp_user)
                 } else {
-                    self.updateUser(user)
+                    self.updateUser(tmp_user)
                 }
                 
                 // TODO: reload the tableview (you may need a delegate)
-                print("Self.Users : \(self.Users.count)")
+                self.printUsers()
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userUpdated"), object: nil, userInfo: ["users" : self.Users])
             })
         
     }
+    
+    
     
     func addKitchen(_ kitchen: kitchen) {
         // always start with the top level-node
@@ -146,16 +147,16 @@ class FirebaseDB {
         print("userResults : \(userResults)")
         // pull out the kitchen id
         // this is the name of the node, not in the node content
-        let username = userResults.keys.first!
+        let username = snap.key
         // pull out the other properties
         // make sure the key actually exists before using it,
         // something like...
         userResult.username = username
-        userResult.password = userResults[username]?[U.passwordKey] == nil ? "" : userResults[username]?[U.passwordKey]! as! String
+        userResult.password = userResults[U.passwordKey] == nil ? "" : userResults[U.passwordKey]! as! String
+        userResult.orders = userResults[U.ordersKey] as! [String : AnyObject]
         
-        userResult.orders = userResults[username]?[U.ordersKey] as! [String : AnyObject]
-        
-        print("orderResults : \(userResult.orders)")
+        print("userResult : ")
+        userResult.printUser()
         
         // TODO: repeat for each property in Kitchen
         // TODO: return a kitchen object with the properties set
@@ -255,6 +256,15 @@ class FirebaseDB {
         tmp.id = "100"
         tmp.name = "Hello"
         addKitchen(tmp)
+    }
+    
+    // Utility functions
+    func printUsers() {
+        print("=============Printing users :=============")
+        for i in 0..<self.Users.count {
+            self.Users[i].printUser();
+        }
+        print("==========================================")
     }
 }
 

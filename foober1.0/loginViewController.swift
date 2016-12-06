@@ -18,7 +18,11 @@ class loginViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     var isLogin = true
-    var users : [user] = []
+    var users : [user] = [] {
+        didSet {
+            self.printUsers();
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +47,11 @@ class loginViewController: UIViewController {
         print("notification \(notification)")
         let updatedUsers = notification.userInfo as! Dictionary<String, [user]>
         
-        
+        //let updatedUsers = notification.userInfo as! Dictionary<String, user>
+        print("loginView")
         self.users = updatedUsers["users"]!
+        
+        //self.users = updatedUsers["users"]!
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,8 +59,9 @@ class loginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func loginBttnPressed(_ sender: UIButton) {
-        //isAuthenticated = true
+        isAuthenticated = true
         if isAuthenticated {
             // Check the database against.
             performSegue(withIdentifier: "authenticatedSegue", sender: self)
@@ -74,5 +82,12 @@ class loginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    // Utility functions
+    func printUsers() {
+        print("=============Printing users :=============")
+        for i in 0..<self.users.count {
+            self.users[i].printUser();
+        }
+        print("==========================================")
+    }
 }
