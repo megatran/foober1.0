@@ -12,11 +12,50 @@ import Firebase
 class FirebaseDB {
     
     let ref = FIRDatabase.database().reference()
+    
     var Kitchens:[kitchen] = []
+    var Users:[user] = []
     
     struct K {
         static let kitchenKey = "kitchens"
         static let nameKey = "Name"
+    }
+    
+    struct U {
+        static let userKey = "users"
+        static let passwordKey = "password"
+        static let ordersKey = "orders"
+    }
+    
+    func getUserInfo() {
+        print("Getting user Info")
+        ref.child(U.userKey)
+            .queryOrderedByValue()
+            .observe(.value, with: { (snapshot) in
+                
+                let user = self.convertSnapshotToUserObject(snapshot)
+                
+                // Check if the current array already contains the user with the username.
+                let index = self.findUser(username: user.username);
+                
+                //print("Printing added kitchen")
+                //kitchen.printkitchen()
+                
+                // Make sure that the kitchen is a new user.
+                // Otherwise update the old one.
+                if index < 0 {
+                    print("new user")
+                    user.printUser()
+                    self.Users.append(user)
+                } else {
+                    self.updateUser(user)
+                }
+                
+                // TODO: reload the tableview (you may need a delegate)
+                print("Self.Users : \(self.Users.count)")
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userUpdated"), object: nil, userInfo: ["users" : self.Users])
+            })
+        
     }
     
     func addKitchen(_ kitchen: kitchen) {
@@ -42,6 +81,39 @@ class FirebaseDB {
             ])
     }
     
+    func addUser(_ user: user) {
+        // always start with the top level-node
+        // grab its child named "Kitchen", or create it if needed
+        // add a child node of "Kitchen" with where node key = kitchen.id
+        // set the value for the key to a dictionary
+        
+        print("Adding new user")
+        
+        ref.child(U.userKey).child(user.username).setValue(
+            [U.userKey: user.username,
+             U.passwordKey: user.password,
+             U.ordersKey: user.orders
+             ])
+    }
+    
+    func removeUser(_ username: String) {
+        ref.child(U.userKey).child(username).removeValue()
+    }
+    
+    func updateUser(_ user: user) {
+        ref.child(U.userKey).child(user.username).updateChildValues(
+            [U.userKey: user.username,
+             U.passwordKey: user.username
+            ])
+    }
+    
+    func addOrder(_  username: String, item_id: UUID, amount: Int) {
+        ref.child(U.userKey).child(username).child(U.ordersKey).setValue(
+            [
+                item_id: amount,
+            ])
+    }
+    
     /**
      Convert a FIRDataSnapshot object to a Kitchen object.
      Parameters: accepts a FIRDataSnapshot that
@@ -64,6 +136,30 @@ class FirebaseDB {
         // TODO: repeat for each property in Kitchen
         // TODO: return a kitchen object with the properties set
         return kitchenResult
+    }
+    
+    func convertSnapshotToUserObject(_ snap: FIRDataSnapshot) -> user {
+        let userResult = user()
+        
+        let userResults = snap.value as! [String : AnyObject]
+        
+        print("userResults : \(userResults)")
+        // pull out the kitchen id
+        // this is the name of the node, not in the node content
+        let username = userResults.keys.first!
+        // pull out the other properties
+        // make sure the key actually exists before using it,
+        // something like...
+        userResult.username = username
+        userResult.password = userResults[username]?[U.passwordKey] == nil ? "" : userResults[username]?[U.passwordKey]! as! String
+        
+        userResult.orders = userResults[username]?[U.ordersKey] as! [String : AnyObject]
+        
+        print("orderResults : \(userResult.orders)")
+        
+        // TODO: repeat for each property in Kitchen
+        // TODO: return a kitchen object with the properties set
+        return userResult
     }
     
     // Setup observers that perform a closure each time a kitchen is added,
@@ -94,7 +190,7 @@ class FirebaseDB {
                 //print("Kitchen size : \(self.kitchens.count)")
                 //self.libraryTableView.reloadData()                // TODO: insert kitchen obj into the local kitchen array
                 // TODO: reload the tableview (you may need a delegate)
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataUpdated"), object: nil, userInfo: ["kitchens" : self.Kitchens])
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kitchenUpdated"), object: nil, userInfo: ["kitchens" : self.Kitchens])
             })
         
         // listen for changes in kitchen data
@@ -111,7 +207,7 @@ class FirebaseDB {
                     self.Kitchens[index] = kitchen
                 }
                 
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataUpdated"), object: nil, userInfo: ["kitchens" : self.Kitchens])
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kitchenUpdated"), object: nil, userInfo: ["kitchens" : self.Kitchens])
                 //self.libraryTableView.reloadData()
                 // TODO: update the correct kitchen in your array
                 // TODO: reload the tableview
@@ -132,13 +228,22 @@ class FirebaseDB {
                 // TODO: remove the proper kitchen from the array
                 // TODO: update the tableview
                 
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dataUpdated"), object: nil, userInfo: ["kitchens" : self.Kitchens])
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kitchenUpdated"), object: nil, userInfo: ["kitchens" : self.Kitchens])
             })
     }
     
     func findKitchen(kitchen_id: String) -> Int {
         for i in 0..<self.Kitchens.count {
             if self.Kitchens[i].id == kitchen_id{
+                return i
+            }
+        }
+        return -1
+    }
+    
+    func findUser(username: String) -> Int {
+        for i in 0..<self.Users.count {
+            if self.Users[i].username == username{
                 return i
             }
         }

@@ -194,7 +194,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate{
     
     func zoomMapView(){
         print("setting region")
-        var region: MKCoordinateRegion = findCenter()
+        let region: MKCoordinateRegion = findCenter()
         self.mapView.setRegion(region, animated: true) // Choose if you want animate or not
     }
     

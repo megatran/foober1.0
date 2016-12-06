@@ -26,6 +26,7 @@
 		FC54009C1DF36B400030377C /* menuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009B1DF36B400030377C /* menuCell.swift */; };
 		FC54009E1DF36B750030377C /* menuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009D1DF36B750030377C /* menuTableView.swift */; };
 		FC5400A01DF36CC00030377C /* kitchenInfoPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */; };
+		FC5400A81DF677790030377C /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5400A71DF677790030377C /* user.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FC54009B1DF36B400030377C /* menuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuCell.swift; sourceTree = "<group>"; };
 		FC54009D1DF36B750030377C /* menuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableView.swift; sourceTree = "<group>"; };
 		FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kitchenInfoPopUpView.swift; sourceTree = "<group>"; };
+		FC5400A71DF677790030377C /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				98B32CBF1DE2E29000A4B312 /* kitchen.swift */,
 				98B32CC11DE2E2DA00A4B312 /* Menu.swift */,
+				FC5400A71DF677790030377C /* user.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				FC5400901DF349AB0030377C /* accountSettingViewController.swift in Sources */,
 				FC54009A1DF36B340030377C /* myOrderCell.swift in Sources */,
 				98B32CBE1DE2E0F600A4B312 /* kitchenAnnotationView.swift in Sources */,
+				FC5400A81DF677790030377C /* user.swift in Sources */,
 				FC54009E1DF36B750030377C /* menuTableView.swift in Sources */,
 				EF6F96D61DE297960018D9E5 /* AppDelegate.swift in Sources */,
 				FC5400A01DF36CC00030377C /* kitchenInfoPopUpView.swift in Sources */,

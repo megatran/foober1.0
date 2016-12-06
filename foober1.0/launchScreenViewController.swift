@@ -13,10 +13,16 @@ class launchScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        database.insertData()
         // Do any additional setup after loading the view.
+            
+//            OperationQueue.main.addOperation {
+//                [weak self] in
+//                self?.performSegue(withIdentifier: "loggedInSegue", sender: self)
+//            }
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -26,6 +32,20 @@ class launchScreenViewController: UIViewController {
     }
 
     @IBAction func signupPressed(_ sender: Any) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "loginSegue" {
+            let LV = segue.destination as! loginViewController
+            LV.isLogin = true
+        } else if segue.identifier == "signupSegue" {
+            let LV = segue.destination as! loginViewController
+            LV.isLogin = false
+        } else if segue.identifier == "loggedInSegue" {
+            print("logged In")
+            //let LV = segue.destination as! UITabBarController
+        }
     }
     /*
     // MARK: - Navigation

@@ -1,0 +1,19 @@
+{
+  "kitchens" : {
+    "100" : {
+      "Name" : "Yolo"
+    },
+    "kitchen_id" : {
+      "name" : "Hello"
+    }
+  },
+  "users" : {
+    ""
+    "amos" : {
+      "orders" : {
+        "unique_id" : 1,
+      },
+      "password" : "1234"
+    }
+  }
+}
