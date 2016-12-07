@@ -9,15 +9,22 @@
 import Foundation
 import MapKit
 import CoreLocation
+import UIKit
 
-class kitchenAnnotation : NSObject, MKAnnotation{
-    var coordinate: CLLocationCoordinate2D
-    var phone: String!
-    var name: String!
-    var address: String!
-    var image: UIImage!
+class kitchenAnnotation : NSObject, MKAnnotation {
+    private var coord: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     
-    init(coordinate: CLLocationCoordinate2D) {
-        self.coordinate = coordinate
+    var coordinate: CLLocationCoordinate2D {
+        get {
+            return coord
+        }
+    }
+    
+    var title: String? = ""
+    var subtitle: String? = ""
+    var kitchenPin = kitchen()
+    
+    func setCoordinate(newCoordinate: CLLocationCoordinate2D) {
+        self.coord = newCoordinate
     }
 }

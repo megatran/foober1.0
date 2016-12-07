@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 
-var isAuthenticated = false
 class loginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
@@ -43,11 +42,11 @@ class loginViewController: UIViewController {
     }
     
     func updateUsers(notification: NSNotification) {
-        print("notification \(notification)")
+        print("loginView : notification \(notification)")
         let updatedUsers = notification.userInfo as! Dictionary<String, [user]>
         
         //let updatedUsers = notification.userInfo as! Dictionary<String, user>
-        print("loginView")
+        //print("loginView")
         self.users = updatedUsers["users"]!
         
         //self.users = updatedUsers["users"]!
@@ -60,13 +59,14 @@ class loginViewController: UIViewController {
     
     
     @IBAction func loginBttnPressed(_ sender: UIButton) {
-        if checkUser(username: usernameField.text!, password: passwordField.text!) {
-            isAuthenticated = true
-            performSegue(withIdentifier: "authenticatedSegue", sender: nil)
-        } else {
-            // Display Error message.
-            showAlert(message: "Please check your username or password.")
-        }
+        performSegue(withIdentifier: "authenticatedSegue", sender: nil)
+//        if checkUser(username: usernameField.text!, password: passwordField.text!) {
+//            isAuthenticated = true
+//            performSegue(withIdentifier: "authenticatedSegue", sender: nil)
+//        } else {
+//            // Display Error message.
+//            showAlert(message: "Please check your username or password.")
+//        }
     }
 
     @IBAction func registerBttnPressed(_ sender: UIButton) {
@@ -88,6 +88,7 @@ class loginViewController: UIViewController {
     }
     
     func printUsers() {
+        print("loginView : ")
         print("=============Printing users :=============")
         for i in 0..<self.users.count {
             self.users[i].printUser();

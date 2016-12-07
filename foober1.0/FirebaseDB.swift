@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import CoreLocation
 
 class FirebaseDB {
     
@@ -18,7 +19,8 @@ class FirebaseDB {
     
     struct K {
         static let kitchenKey = "kitchens"
-        static let nameKey = "Name"
+        static let nameKey = "name"
+        static let menuKey = "menu"
     }
     
     struct U {
@@ -28,7 +30,7 @@ class FirebaseDB {
     }
     
     func getUserInfo() {
-        print("Getting user Info")
+        print("FirebaseDB : Getting user Info")
         ref.child(U.userKey)
             .queryOrderedByValue()
             .observe(.childAdded, with: { (snapshot) in
@@ -65,7 +67,7 @@ class FirebaseDB {
         // add a child node of "Kitchen" with where node key = kitchen.id
         // set the value for the key to a dictionary
         
-        print("Adding new kitchen")
+        print("FirebaseDB : Adding new kitchen")
         
         ref.child(K.kitchenKey).child(kitchen.id).setValue(
             [K.nameKey: "Yolo",
@@ -88,7 +90,7 @@ class FirebaseDB {
         // add a child node of "Kitchen" with where node key = kitchen.id
         // set the value for the key to a dictionary
         
-        print("Adding new user")
+        print("FirebaseDB : Adding new user")
         
         ref.child(U.userKey).child(user.username).setValue(
             [U.userKey: user.username,
@@ -123,19 +125,55 @@ class FirebaseDB {
      **/
     func convertSnapshotToKitchenObject(_ snap: FIRDataSnapshot) -> kitchen {
         let kitchenResult = kitchen()
+        let itemResult = item()
         
-        let kitchenValues = snap.value as! [String : AnyObject]
-        // pull out the kitchen id
-        // this is the name of the node, not in the node content
-        let id = snap.key
-        // pull out the other properties
-        // make sure the key actually exists before using it,
-        // something like...
-        kitchenResult.id = id
-        kitchenResult.name = kitchenValues[K.nameKey] == nil ? "" : kitchenValues[K.nameKey]! as! String
+        print("FirebaseDB : kitchen span \(snap)")
+//        "Aunty Betty_1": {
+//            "menu": {
+//                "Fried Chicken": {
+//                    "quantity": 10,
+//                    "image" : "friedchicken",
+//                    "description": "Fried chicken tastes so good!"
+//                },
+//                "Mashed Potato": {
+//                    "quantity": 9,
+//                    "image" : "mashedpotato",
+//                    "description": "Hello"
+//                }
+//            }
+//        },
+        let kitchenName = snap.key
+        let kitchenMenu = snap.value as! [String : AnyObject]
+        let menuList = kitchenMenu[K.menuKey] as! [String : AnyObject]
         
+        let latitude = kitchenMenu["latitude"] as! String
+        let longitude = kitchenMenu["longitude"] as! String
+        
+        let rating = kitchenMenu["rating"] as! Double
+        
+        kitchenResult.location = CLLocationCoordinate2D(latitude: Double(latitude)!,longitude: Double(longitude)!)
+        kitchenResult.rating = rating     
+        
+        for item in menuList{
+            let properties = item.value as! [String : AnyObject]
+            let quantity = properties["quantity"] as! Int
+            let description = properties["description"] as! String
+            let image = properties["image"] as! String
+            let price = properties["price"] as! Double
+            
+            itemResult.image = UIImage(named: image)!
+            itemResult.description = description
+            itemResult.price = price
+            itemResult.quantity = quantity
+            
+            kitchenResult.name = kitchenName
+            kitchenResult.menu.append(itemResult)
+        }
+                
         // TODO: repeat for each property in Kitchen
         // TODO: return a kitchen object with the properties set
+        kitchenResult.printKitchen()
+        
         return kitchenResult
     }
     
@@ -144,7 +182,7 @@ class FirebaseDB {
         
         let userResults = snap.value as! [String : AnyObject]
         
-        print("userResults : \(userResults)")
+        print("FirebaseDB : userResults : \(userResults)")
         // pull out the kitchen id
         // this is the name of the node, not in the node content
         let username = snap.key
@@ -155,7 +193,7 @@ class FirebaseDB {
         userResult.password = userResults[U.passwordKey] == nil ? "" : userResults[U.passwordKey]! as! String
         userResult.orders = userResults[U.ordersKey] as! [String : AnyObject]
         
-        print("userResult : ")
+        print("FirebaseDB : userResult : ")
         userResult.printUser()
         
         // TODO: repeat for each property in Kitchen
@@ -166,7 +204,7 @@ class FirebaseDB {
     // Setup observers that perform a closure each time a kitchen is added,
     // removed, or changed
     func setupDBListeners() {
-        print("Listening")
+        print("FirebaseDB : Listening")
         // listen for new Kitchen added
         // also, let’s make sure it returns each kitchen in order by name
         ref.child(K.kitchenKey)
@@ -175,7 +213,7 @@ class FirebaseDB {
                 let kitchen = self.convertSnapshotToKitchenObject(snapshot)
                 
                 // Check if the current array already contains the kitchen with the id.
-                let index = self.findKitchen(kitchen_id: kitchen.id);
+                let index = self.findKitchen(kitchen_name: kitchen.name);
                 
                 //print("Printing added kitchen")
                 //kitchen.printkitchen()
@@ -199,7 +237,7 @@ class FirebaseDB {
             .observe(.childChanged, with: { (snapshot) in
                 let kitchen = self.convertSnapshotToKitchenObject(snapshot)
                 
-                let index = self.findKitchen(kitchen_id: kitchen.id);
+                let index = self.findKitchen(kitchen_name: kitchen.name);
                 
                 // Make sure that the index is updated. Otherwise, add this kitchen as a new kitchen.
                 if index < 0 {
@@ -219,7 +257,7 @@ class FirebaseDB {
                 
                 let kitchen = self.convertSnapshotToKitchenObject(snapshot)
                 
-                let index = self.findKitchen(kitchen_id: kitchen.id);
+                let index = self.findKitchen(kitchen_name: kitchen.name);
                 
                 // Make sure that the index is updated. Otherwise, add this kitchen as a new kitchen.
                 if index > 0 {
@@ -233,9 +271,9 @@ class FirebaseDB {
             })
     }
     
-    func findKitchen(kitchen_id: String) -> Int {
+    func findKitchen(kitchen_name: String) -> Int {
         for i in 0..<self.Kitchens.count {
-            if self.Kitchens[i].id == kitchen_id{
+            if self.Kitchens[i].name == kitchen_name{
                 return i
             }
         }
@@ -260,6 +298,7 @@ class FirebaseDB {
     
     // Utility functions
     func printUsers() {
+        print("FirebaseDB : ")
         print("=============Printing users :=============")
         for i in 0..<self.Users.count {
             self.Users[i].printUser();

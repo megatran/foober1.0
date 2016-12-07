@@ -12,6 +12,7 @@ import UIKit
 class item {
     var name : String = ""
     var price = Double()
-    var ingredients : [String] = []
+    var description : String = ""
     var image = UIImage()
+    var quantity = Int()
 }

@@ -7,21 +7,20 @@
 //
 
 import UIKit
+var isAuthenticated = false
 
 class launchScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        isAuthenticated = true
+
         // Do any additional setup after loading the view.
             
 //            OperationQueue.main.addOperation {
 //                [weak self] in
 //                self?.performSegue(withIdentifier: "loggedInSegue", sender: nil)
 //            }
-        if isAuthenticated {
-            performSegue(withIdentifier: "loggedInSegue", sender: nil)
-        }
     }
 
     
@@ -46,7 +45,7 @@ class launchScreenViewController: UIViewController {
             let LV = segue.destination as! loginViewController
             LV.isLogin = false
         } else if segue.identifier == "loggedInSegue" {
-            print("logged In")
+            print("launchScreen : logged In")
             //let LV = segue.destination as! UITabBarController
         }
     }

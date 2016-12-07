@@ -1,0 +1,5 @@
+To Do 
+=====
+- Host images on S3
+- Use current location
+- 

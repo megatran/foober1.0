@@ -1,21 +1,246 @@
 {
-  "kitchens" : {
-    "kitchen_id" : {
-      "name" : "Hello"
+  "kitchens": {
+    "Aunty Betty_1": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 3.5,
+      "longitude": "-105.219362",
+      "latitude": "39.7396741558935"
+    },
+    "Aunty Betty_2": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 2.5,
+      "longitude": "-105.227413529791",
+      "latitude": "39.7465199965792"
+    },
+    "Aunty Betty_3": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 1.5,
+      "longitude": "-105.232695333333",
+      "latitude": "39.7378578595041"
+    },
+    "Aunty Betty_4": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },      
+      "rating" : 4.0,
+      "longitude": "-105.219362",
+      "latitude": "39.7673081805274"
+    },
+    "Aunty Betty_5": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 5.0,
+      "longitude": "-105.212551557321",
+      "latitude": "39.7635587183601"
+    },
+    "Aunty Betty_6": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 4.0,
+      "longitude": "-105.219362",
+      "latitude": "39.7770175994236"
+    },
+    "Aunty Betty_7": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 3.0,
+      "longitude": "-105.210985036649",
+      "latitude": "39.7618048605898"
+    },
+    "Aunty Betty_8": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 2.0,
+      "longitude": "-105.209082998532",
+      "latitude": "39.7676251176471"
+    },
+    "Aunty Betty_9": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 1.0,
+      "longitude": "-105.227667647841",
+      "latitude": "39.7351764274354"
+    },
+    "Aunty Betty_10": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 3.0,
+      "longitude": "-105.215599064911",
+      "latitude": "39.7532958394241"
+    },
+    "Aunty Betty_11": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 2.0,
+      "longitude": "-105.218393007752",
+      "latitude": "39.7561378900126"
+    },
+    "Aunty Betty_12": {
+      "menu": {
+        "Fried Chicken": {
+          "quantity": 10,
+          "image": "friedchicken",
+          "description": "Fried chicken tastes so good!",
+          "price": 3.5
+        },
+        "Mashed Potato": {
+          "quantity": 9,
+          "image": "mashedpotato",
+          "description": "Hello",
+          "price": 1.70
+        }
+      },
+      "rating" : 1.0,
+      "longitude": "-105.230153366906",
+      "latitude": "39.7493142155477"
     }
   },
-  "users" : {
-    "amos" : {
-      "orders" : {
-        "unique_id" : 1
+  "users": {
+    "amos": {
+      "orders": {
+        "unique_id": 1
       },
-      "password" : "1234"
+      "password": "1234"
     },
-    "jason" : {
-      "orders" : {
-        "unique_id" : 1
+    "jason": {
+      "orders": {
+        "unique_id": 1
       },
-      "password" : "1234"
+      "password": "1234"
     }
   }
 }

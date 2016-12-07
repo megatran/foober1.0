@@ -16,6 +16,7 @@
 		EF6F96D61DE297960018D9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6F96D51DE297960018D9E5 /* AppDelegate.swift */; };
 		EF6F96DD1DE297960018D9E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6F96DB1DE297960018D9E5 /* Main.storyboard */; };
 		EF6F96DF1DE297960018D9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6F96DE1DE297960018D9E5 /* Assets.xcassets */; };
+		FC186BC91DF7BFA3000DE508 /* customMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC186BC81DF7BFA3000DE508 /* customMV.swift */; };
 		FC54008C1DF349030030377C /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008B1DF349030030377C /* mapViewController.swift */; };
 		FC54008E1DF349830030377C /* myOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008D1DF349830030377C /* myOrderViewController.swift */; };
 		FC5400901DF349AB0030377C /* accountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008F1DF349AB0030377C /* accountSettingViewController.swift */; };
@@ -43,6 +44,7 @@
 		EF6F96DC1DE297960018D9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF6F96DE1DE297960018D9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6F96E31DE297960018D9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC186BC81DF7BFA3000DE508 /* customMV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customMV.swift; sourceTree = "<group>"; };
 		FC54008B1DF349030030377C /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		FC54008D1DF349830030377C /* myOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myOrderViewController.swift; sourceTree = "<group>"; };
 		FC54008F1DF349AB0030377C /* accountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountSettingViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				FC54008B1DF349030030377C /* mapViewController.swift */,
+				FC186BC81DF7BFA3000DE508 /* customMV.swift */,
 				FC54009F1DF36CC00030377C /* kitchenInfoPopUpView.swift */,
 				98B32CB91DE2DF0C00A4B312 /* kitchenAnnotation.swift */,
 				98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */,
@@ -304,6 +307,7 @@
 				FC5400A01DF36CC00030377C /* kitchenInfoPopUpView.swift in Sources */,
 				98B32CC21DE2E2DA00A4B312 /* Menu.swift in Sources */,
 				98B32CC01DE2E29000A4B312 /* kitchen.swift in Sources */,
+				FC186BC91DF7BFA3000DE508 /* customMV.swift in Sources */,
 				98B32CBA1DE2DF0C00A4B312 /* kitchenAnnotation.swift in Sources */,
 				FC54008E1DF349830030377C /* myOrderViewController.swift in Sources */,
 				FC5400961DF35EAE0030377C /* FirebaseDB.swift in Sources */,

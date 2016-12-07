@@ -15,4 +15,9 @@ class kitchen {
     var address : String = ""
     var menu : [item] = []
     var location = CLLocationCoordinate2D()
+    var dropped : Bool = false
+    var rating = Double()
+    func printKitchen() {
+        print("name : \(name), location : \(location), menu : \(menu)")
+    }
 }
