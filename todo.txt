@@ -1,5 +1,21 @@
-To Do 
-=====
-- Host images on S3
-- Use current location
-- 
+Topics 
+
+Challenges
+- Building the database schema
+- Two things : users and the kitchens
+- Displaying views programmatically
+- Making sure that the Data are being passed in correctly
+
+To do
+- Lots!
+- Host resources elsewhere
+- use the user's location
+- Order
+- Update data simultaneously across app
+- Encrypty user information
+- Build the Firebase schema in an efficient manner. 
+It only supports evens listeners for only one level.
+So, I have to create unique ids to associate between
+the data. Order > ids of items instead of nested data
+- Account setting page also needs to work
+- UI

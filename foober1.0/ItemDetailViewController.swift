@@ -38,11 +38,19 @@ class ItemDetailViewController: UIViewController {
     @IBAction func orderBttnPressed(_ sender: Any) {
         //Add to my order list
         myOrders.append(chosenItem)
+        print("Ordered")
+        showAlert(message: "Ordered \(chosenItem.name)")
     }
     
     @IBAction func cancelBttnPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Enjoy!", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
