@@ -18,6 +18,7 @@
 		EF6F96DF1DE297960018D9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6F96DE1DE297960018D9E5 /* Assets.xcassets */; };
 		FC186BC91DF7BFA3000DE508 /* customMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC186BC81DF7BFA3000DE508 /* customMV.swift */; };
 		FC186BCB1DF7D501000DE508 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC186BCA1DF7D501000DE508 /* ItemDetailViewController.swift */; };
+		FC186BCD1DF80937000DE508 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC186BCC1DF80937000DE508 /* Launch Screen.storyboard */; };
 		FC54008C1DF349030030377C /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008B1DF349030030377C /* mapViewController.swift */; };
 		FC54008E1DF349830030377C /* myOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008D1DF349830030377C /* myOrderViewController.swift */; };
 		FC5400901DF349AB0030377C /* accountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008F1DF349AB0030377C /* accountSettingViewController.swift */; };
@@ -47,6 +48,7 @@
 		EF6F96E31DE297960018D9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC186BC81DF7BFA3000DE508 /* customMV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customMV.swift; sourceTree = "<group>"; };
 		FC186BCA1DF7D501000DE508 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		FC186BCC1DF80937000DE508 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FC54008B1DF349030030377C /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		FC54008D1DF349830030377C /* myOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myOrderViewController.swift; sourceTree = "<group>"; };
 		FC54008F1DF349AB0030377C /* accountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountSettingViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF8956E1DF664680066134A /* GoogleService-Info.plist */,
+				FC186BCC1DF80937000DE508 /* Launch Screen.storyboard */,
 				EF6F96DB1DE297960018D9E5 /* Main.storyboard */,
 				EF6F96D51DE297960018D9E5 /* AppDelegate.swift */,
 				FC5400951DF35EAE0030377C /* FirebaseDB.swift */,
@@ -241,6 +244,7 @@
 			files = (
 				EF6F96DF1DE297960018D9E5 /* Assets.xcassets in Resources */,
 				EF6F96DD1DE297960018D9E5 /* Main.storyboard in Resources */,
+				FC186BCD1DF80937000DE508 /* Launch Screen.storyboard in Resources */,
 				5AF8956F1DF664680066134A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
