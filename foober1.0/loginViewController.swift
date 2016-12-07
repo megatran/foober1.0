@@ -59,14 +59,14 @@ class loginViewController: UIViewController {
     
     
     @IBAction func loginBttnPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "authenticatedSegue", sender: nil)
-//        if checkUser(username: usernameField.text!, password: passwordField.text!) {
-//            isAuthenticated = true
-//            performSegue(withIdentifier: "authenticatedSegue", sender: nil)
-//        } else {
-//            // Display Error message.
-//            showAlert(message: "Please check your username or password.")
-//        }
+        //performSegue(withIdentifier: "authenticatedSegue", sender: nil)
+        if checkUser(username: usernameField.text!, password: passwordField.text!) {
+            isAuthenticated = true
+            performSegue(withIdentifier: "authenticatedSegue", sender: nil)
+        } else {
+            // Display Error message.
+            showAlert(message: "Please check your username or password.")
+        }
     }
 
     @IBAction func registerBttnPressed(_ sender: UIButton) {
