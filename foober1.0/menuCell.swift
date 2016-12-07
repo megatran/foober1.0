@@ -10,9 +10,12 @@ import UIKit
 
 class menuCell: UITableViewCell {
 
-    @IBOutlet weak var menuLabel: UIView!
+    @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemPrice: UILabel!
     
-    @IBOutlet weak var availableItemLabel: UILabel!
+    var chosenItem = item()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

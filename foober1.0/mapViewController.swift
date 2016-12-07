@@ -161,6 +161,7 @@ class mapViewController: UIViewController{
                 let annotation = kitchenAnnotation()
                 annotation.setCoordinate(newCoordinate: item.location)
                 annotation.kitchenPin = item
+                print("Mapview items \(item.menu[0].name), \(item.menu[1].name)")
                 //let annotation = MKPointAnnotation()
                 //let longitude = locationManager.location?.coordinate.longitude
                 //let latitude = (locationManager.location?.coordinate.latitude)! + 0.0005

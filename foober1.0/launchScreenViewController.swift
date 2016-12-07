@@ -7,7 +7,10 @@
 //
 
 import UIKit
+
+// Global vairables
 var isAuthenticated = false
+var myOrders : [item] = []
 
 class launchScreenViewController: UIViewController {
 

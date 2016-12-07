@@ -17,6 +17,7 @@
 		EF6F96DD1DE297960018D9E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6F96DB1DE297960018D9E5 /* Main.storyboard */; };
 		EF6F96DF1DE297960018D9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6F96DE1DE297960018D9E5 /* Assets.xcassets */; };
 		FC186BC91DF7BFA3000DE508 /* customMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC186BC81DF7BFA3000DE508 /* customMV.swift */; };
+		FC186BCB1DF7D501000DE508 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC186BCA1DF7D501000DE508 /* ItemDetailViewController.swift */; };
 		FC54008C1DF349030030377C /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008B1DF349030030377C /* mapViewController.swift */; };
 		FC54008E1DF349830030377C /* myOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008D1DF349830030377C /* myOrderViewController.swift */; };
 		FC5400901DF349AB0030377C /* accountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54008F1DF349AB0030377C /* accountSettingViewController.swift */; };
@@ -45,6 +46,7 @@
 		EF6F96DE1DE297960018D9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6F96E31DE297960018D9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC186BC81DF7BFA3000DE508 /* customMV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customMV.swift; sourceTree = "<group>"; };
+		FC186BCA1DF7D501000DE508 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		FC54008B1DF349030030377C /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		FC54008D1DF349830030377C /* myOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myOrderViewController.swift; sourceTree = "<group>"; };
 		FC54008F1DF349AB0030377C /* accountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountSettingViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				98B32CBD1DE2E0F600A4B312 /* kitchenAnnotationView.swift */,
 				FC54009D1DF36B750030377C /* menuTableView.swift */,
 				FC54009B1DF36B400030377C /* menuCell.swift */,
+				FC186BCA1DF7D501000DE508 /* ItemDetailViewController.swift */,
 			);
 			name = mapView;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				98B32CBA1DE2DF0C00A4B312 /* kitchenAnnotation.swift in Sources */,
 				FC54008E1DF349830030377C /* myOrderViewController.swift in Sources */,
 				FC5400961DF35EAE0030377C /* FirebaseDB.swift in Sources */,
+				FC186BCB1DF7D501000DE508 /* ItemDetailViewController.swift in Sources */,
 				FC5400981DF362490030377C /* launchScreenViewController.swift in Sources */,
 				FC5400921DF34A7D0030377C /* loginViewController.swift in Sources */,
 				FC54009C1DF36B400030377C /* menuCell.swift in Sources */,

@@ -29,11 +29,11 @@ class kitchenInfoPopUpView: UIViewController {
         
         
         if chosenKitchen.rating >= 4 {
-            rating.tintColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+            rating.settings.filledColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         } else if chosenKitchen.rating >= 3 {
-            rating.tintColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+            rating.settings.filledColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         } else {
-            rating.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+            rating.settings.filledColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         }
         
         rating.rating = chosenKitchen.rating
@@ -49,7 +49,19 @@ class kitchenInfoPopUpView: UIViewController {
     }
 
     @IBAction func viewBttnTapped(_ sender: UIButton) {
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showMenuSegue")
+        {
+            let viewController: menuTableView = segue.destination as! menuTableView
+            viewController.menu = chosenKitchen.menu
+            print("Kitchen popUP \(chosenKitchen.menu[0].name), \(chosenKitchen.menu[1].name)")
+            //self.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

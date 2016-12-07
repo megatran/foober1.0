@@ -154,19 +154,26 @@ class FirebaseDB {
         kitchenResult.location = CLLocationCoordinate2D(latitude: Double(latitude)!,longitude: Double(longitude)!)
         kitchenResult.rating = rating     
         
+        
+        
         for item in menuList{
             let properties = item.value as! [String : AnyObject]
             let quantity = properties["quantity"] as! Int
             let description = properties["description"] as! String
             let image = properties["image"] as! String
             let price = properties["price"] as! Double
+            let itemName = item.key
             
+            itemResult.name = itemName
             itemResult.image = UIImage(named: image)!
             itemResult.description = description
             itemResult.price = price
             itemResult.quantity = quantity
             
             kitchenResult.name = kitchenName
+            
+            
+            print("adding \(itemResult.name)")
             kitchenResult.menu.append(itemResult)
         }
                 
