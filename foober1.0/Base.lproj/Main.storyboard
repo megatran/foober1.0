@@ -714,7 +714,7 @@
         <scene sceneID="47I-li-9gc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="td0-Az-tNm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Orders" image="Purchase Order-30" selectedImage="Settings-50" id="GZb-lm-c9U"/>
+                    <tabBarItem key="tabBarItem" title="My Orders" image="Purchase Order-30" selectedImage="Purchase Order-30" id="GZb-lm-c9U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1XV-Y5-Gzu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -734,7 +734,6 @@
         <image name="Chef Hat-30" width="30" height="30"/>
         <image name="Purchase Order-30" width="30" height="30"/>
         <image name="Settings-30" width="30" height="30"/>
-        <image name="Settings-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7nT-FV-KAx"/>
